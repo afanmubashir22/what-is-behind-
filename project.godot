@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="WHAT IS BEHIND"
+run/main_scene="uid://duyc1uahknbux"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://hmp6d11y6qjr"
 
 [editor_plugins]
 
