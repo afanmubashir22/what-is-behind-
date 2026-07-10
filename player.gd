@@ -11,8 +11,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
-	func _unhandled_input(event: InputEvent) -> void:
+		func _unhandled_input(event: InputEvent) -> void:
 
 if event is InputEventmouseMotion and Input.get_mouse-MODE() == Input.MOUSE_MODE_CAPTURED:
 	rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
@@ -31,6 +30,12 @@ if event is InputEventmouseMotion and Input.get_mouse-MODE() == Input.MOUSE_MODE
 						
 						var input_dir :=Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 						var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+						
+						if direction:
+							velocity.x = move_toward(velocity.x, 0, SPEED)
+							velocity.z = move_towards(velocity.z, 0,SPEED)
+							
+							move_and_slide()
 						
 						
 						
