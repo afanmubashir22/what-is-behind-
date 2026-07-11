@@ -16,7 +16,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			
+		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -32,8 +32,12 @@ func  _physics_process(delta: float)  -> void:
 						var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 						
 						if direction:
+							print("Moving direction: ", direction) # <--- ADD THIS LINE TO TEST
 							velocity.x = move_toward(velocity.x, 0, SPEED)
 							velocity.z = move_toward(velocity.z, 0,SPEED)
+						else:
+							velocity.x = move_toward(velocity.x, 0, SPEED)
+							velocity.z = move_toward(velocity.z, 0, SPEED)
 							
 							move_and_slide()
 						
