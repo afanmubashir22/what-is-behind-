@@ -27,12 +27,22 @@ func _unhandled_input(event: InputEvent) -> void:
 func  _physics_process(delta: float)  -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		var input_dir := Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
-		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		if  direction:
-			velocity.x = direction.x * SPEED
-			velocity.z  = direction.z * SPEED
-			move_and_slide()
-			
-		
-		
+		var input_dir = Vector3.ZERO
+		if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP):
+			input_dir -= transform.basis.z
+		if Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN):
+			input_dir += transform.basis.z
+		if Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT):
+			input_dir -= transform.basis.x
+		if Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT):
+						input_dir += transform.basis.x
+						
+						var direction = input_dir.normalized()
+						
+						if direction != Vector3.ZERO:
+							velocity.x = direction.x * SPEED
+							velocity.z = direction.z * SPEED
+						else:
+								velocity.x = move_toward(velocity.x, 0, SPEED)
+								velocity.z = move_toward(velocity.z, 0, SPEED)
+							

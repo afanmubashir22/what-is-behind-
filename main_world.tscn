@@ -2,11 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://clp0713i6vxbx" path="res://player.tscn" id="1_itk02"]
 
+[sub_resource type="Environment" id="Environment_itk02"]
+
 [node name="MainWORLD" type="Node3D" unique_id=365910416]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2076572866]
 use_collision = true
 size = Vector3(20, 1, 20)
 
-[node name="Player" parent="CSGBox3D" unique_id=657102275 instance=ExtResource("1_itk02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.287803, 0)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1045103400]
+transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 0, 1.4683237, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1339763694]
+environment = SubResource("Environment_itk02")
+
+[node name="Player" parent="." unique_id=657102275 instance=ExtResource("1_itk02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0524492, 0)
