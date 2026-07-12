@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://bmbv4gymsvulk"]
 
 [ext_resource type="PackedScene" uid="uid://clp0713i6vxbx" path="res://player.tscn" id="1_hfkix"]
+[ext_resource type="ArrayMesh" uid="uid://tv1224lgcqhp" path="res://assets/12140_Skull_v3_L2.obj" id="1_metfq"]
+[ext_resource type="Material" uid="uid://dex4f41jl2dfw" path="res://assets/Mansion_Walls_Dark.tres" id="1_o1325"]
+[ext_resource type="Texture2D" uid="uid://by0vh6u00x5yh" path="res://assets/Image_0_2.jpeg" id="2_vy7fe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5ubp"]
 albedo_color = Color(0.111756526, 0.112081565, 0.10320676, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10qhy"]
+albedo_texture = ExtResource("2_vy7fe")
 
 [node name="House" type="Node3D" unique_id=797279155]
 
@@ -11,6 +17,7 @@ albedo_color = Color(0.111756526, 0.112081565, 0.10320676, 1)
 
 [node name="HouseShell" type="CSGBox3D" parent="NavigationRegion3D" unique_id=450426943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0810266, -6.3292627, -0.79357964)
+material_override = ExtResource("1_o1325")
 use_collision = true
 size = Vector3(25, 16, 25)
 material = SubResource("StandardMaterial3D_g5ubp")
@@ -37,6 +44,7 @@ size = Vector3(3, 16, 6)
 
 [node name="Wall_Kitchen_Divider" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=101379101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999995, -2.0733337, 4)
+material_override = ExtResource("1_o1325")
 size = Vector3(0.2, 4.0097046, 16)
 
 [node name="Doorway_Cutout" type="CSGBox3D" parent="NavigationRegion3D/HouseShell/Wall_Kitchen_Divider" unique_id=246450965]
@@ -93,8 +101,9 @@ size = Vector3(2, 2.850769, 1.6924438)
 [node name="AltarRoom" type="Node3D" parent="Rooms" unique_id=156917676]
 
 [node name="Altar_Table" type="CSGBox3D" parent="Rooms/AltarRoom" unique_id=319806249]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.108657, -5.6262574, -1.7242155)
-size = Vector3(3, 1.2, 1.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.082822, -5.4867125, -1.5075067)
+size = Vector3(3, 1.2, 1.2700312)
+material = SubResource("StandardMaterial3D_10qhy")
 
 [node name="Candle_Light" type="OmniLight3D" parent="Rooms/AltarRoom/Altar_Table" unique_id=1880660637]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
@@ -102,7 +111,64 @@ light_color = Color(0.8647235, 0.43344063, 0, 1)
 light_energy = 2.5
 shadow_enabled = true
 
+[node name="Skull_1" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=1214136990]
+transform = Transform3D(-0.009063078, 0.0037554584, 0.0019383369, 0, -0.0045864955, 0.008886172, 0.0042261826, 0.008053607, 0.0041567767, -0.20422173, -0.21902418, -0.1663698)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_2" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=918063956]
+transform = Transform3D(-0.009991944, -0.00040131906, -1.7542214e-11, 0, -4.3711387e-10, 0.01, -0.00040131906, 0.009991944, 4.3676174e-10, -0.4016571, -0.19462967, -0.19910479)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_12" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=390058549]
+transform = Transform3D(-0.009988898, 0.00041859696, 0.00021605402, 0, -0.0045864955, 0.008886172, 0.00047106555, 0.008876308, 0.004581404, -0.90673065, -0.08886051, -0.39140308)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_13" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=68780648]
+transform = Transform3D(-0.008720693, -0.004348736, -0.0022445503, -4.0096412e-10, -0.004586495, 0.008886172, -0.0048938235, 0.0077493587, 0.0039997417, -1.0205374, 0.007332325, -0.11672056)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_3" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=1378955518]
+transform = Transform3D(-0.009929655, 0.0011691379, 0.00018726556, 0, -0.0015815806, 0.009874138, 0.0011840404, 0.009804678, 0.0015704549, -0.60226727, -0.18019152, -0.19910479)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_14" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=602518503]
+transform = Transform3D(-0.009063077, 0.004172992, 0.000668405, -1.3826619e-10, -0.0015815808, 0.009874138, 0.0042261835, 0.008949007, 0.001433399, 1.2093239, -0.12223673, -0.28800786)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_4" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=2134888161]
+transform = Transform3D(-0.009991944, -0.00040131842, -1.7542186e-11, 0, -4.3711387e-10, 0.01, -0.00040131842, 0.009991944, 4.3676174e-10, -0.49288082, -0.14507961, -0.04816556)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_5" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=216009145]
+transform = Transform3D(-0.009991944, -0.00040131842, -1.7542186e-11, 0, -4.3711387e-10, 0.01, -0.00040131842, 0.009991944, 4.3676174e-10, -0.31896496, -0.2289486, 0.03734672)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_6" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=539522199]
+transform = Transform3D(-0.009991944, -0.00040131842, -1.7542186e-11, 0, -4.3711387e-10, 0.01, -0.00040131842, 0.009991944, 4.3676174e-10, -0.16790009, -0.17046356, 0.046454906)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_8" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=259116443]
+transform = Transform3D(-0.009802711, -0.001970481, 0.0001550802, 0, 0.00078459084, 0.009969173, -0.001976574, 0.009772493, -0.00076911174, -0.5185108, 0.033694267, -0.07898998)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_11" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=1787805119]
+transform = Transform3D(-0.009802711, -0.001970481, 0.0001550802, 0, 0.00078459084, 0.009969173, -0.001976574, 0.009772493, -0.00076911174, -0.6081295, -0.059568882, 0.13123095)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_10" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=1531352864]
+transform = Transform3D(-0.008902128, 0.0029220905, -0.0034947812, 0, 0.0076716505, 0.0064144963, 0.0045554484, 0.005710266, -0.0068294024, -0.60227776, -0.12784624, 0.082178116)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_9" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=236183942]
+transform = Transform3D(-0.009802711, -0.001970481, 0.0001550802, 0, 0.00078459084, 0.009969173, -0.001976574, 0.009772493, -0.00076911174, -0.197958, 0.026531696, 0.01503706)
+mesh = ExtResource("1_metfq")
+
+[node name="Skull_7" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=2018280713]
+transform = Transform3D(-0.009366721, -0.0034579965, -0.0005538812, 0, -0.0015815806, 0.009874138, -0.0035020742, 0.009248829, 0.0014814225, -0.35506058, 0.013080597, -0.03543496)
+mesh = ExtResource("1_metfq")
+
 [node name="Player" parent="." unique_id=657102275 instance=ExtResource("1_hfkix")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=853937950]
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+light_energy = 0.0
