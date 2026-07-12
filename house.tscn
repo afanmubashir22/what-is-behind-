@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bmbv4gymsvulk"]
+
+[ext_resource type="PackedScene" uid="uid://clp0713i6vxbx" path="res://player.tscn" id="1_hfkix"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5ubp"]
+albedo_color = Color(0.111756526, 0.112081565, 0.10320676, 1)
+
+[node name="House" type="Node3D" unique_id=797279155]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1977198936]
+
+[node name="HouseShell" type="CSGBox3D" parent="NavigationRegion3D" unique_id=450426943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0966315, -6.2804804, -0.838305)
+use_collision = true
+size = Vector3(25, 16, 25)
+material = SubResource("StandardMaterial3D_g5ubp")
+
+[node name="HollowCore" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=195844005]
+operation = 2
+size = Vector3(24, 15.5, 24)
+
+[node name="Floor_1st_Ceiling" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=305057562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+size = Vector3(24, 0.2, 24)
+
+[node name="Floor_2nd_Ceiling2" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=51527449]
+size = Vector3(24, 0.2, 24)
+
+[node name="Floor_3rd_Ceiling3" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=1599313449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+size = Vector3(24, 0.2, 24)
+
+[node name="StairwayCutout" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=337578500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
+operation = 2
+size = Vector3(3, 16, 6)
+
+[node name="Wall_Kitchen_Divider" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=101379101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 2)
+size = Vector3(0.2, 4, 12)
+
+[node name="Doorway_Cutout" type="CSGBox3D" parent="NavigationRegion3D/HouseShell/Wall_Kitchen_Divider" unique_id=246450965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
+operation = 2
+size = Vector3(1.5, 2.5, 2)
+
+[node name="Wall_Garage_Divider" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=20878989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, -4)
+size = Vector3(10, 4, 0.2)
+
+[node name="Wall_2ndFloor_Main" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=486302513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+size = Vector3(24, 4, 0.2)
+
+[node name="Door_Room1" type="CSGBox3D" parent="NavigationRegion3D/HouseShell/Wall_2ndFloor_Main" unique_id=1831784540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015911102, -0.3149414, 0)
+operation = 2
+size = Vector3(2.6763916, 3.1298828, 2)
+
+[node name="CrossWall_1" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=618568483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4422297, 2, -4.128168)
+size = Vector3(10.88446, 3.6593018, 0.25733593)
+
+[node name="CrossWall_2" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=171713332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2360673, 1.9617214, 4.1306963)
+size = Vector3(12.505341, 3.9463043, 0.33442384)
+
+[node name="Rooms" type="Node3D" parent="." unique_id=1235261790]
+
+[node name="Basement" type="Node3D" parent="Rooms" unique_id=42217663]
+
+[node name="Garages" type="Node3D" parent="Rooms" unique_id=2060886305]
+
+[node name="Kitchen" type="Node3D" parent="Rooms" unique_id=1855038560]
+
+[node name="ChildsRoom" type="Node3D" parent="Rooms" unique_id=2122612815]
+
+[node name="AltarRoom" type="Node3D" parent="Rooms" unique_id=156917676]
+
+[node name="Player" parent="." unique_id=657102275 instance=ExtResource("1_hfkix")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=853937950]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
