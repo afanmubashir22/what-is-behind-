@@ -10,7 +10,7 @@ albedo_color = Color(0.111756526, 0.112081565, 0.10320676, 1)
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1977198936]
 
 [node name="HouseShell" type="CSGBox3D" parent="NavigationRegion3D" unique_id=450426943]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0966315, -6.2804804, -0.838305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0810266, -6.3292627, -0.79357964)
 use_collision = true
 size = Vector3(25, 16, 25)
 material = SubResource("StandardMaterial3D_g5ubp")
@@ -58,12 +58,22 @@ operation = 2
 size = Vector3(2.6763916, 3.1298828, 2)
 
 [node name="CrossWall_1" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=618568483]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4422297, 2, -4.128168)
-size = Vector3(10.88446, 3.6593018, 0.25733593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999995, 2, 6.18645)
+size = Vector3(0.2, 4, 12.246338)
+
+[node name="Door_Cutout_1" type="CSGBox3D" parent="NavigationRegion3D/HouseShell/CrossWall_1" unique_id=843696075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
+operation = 2
+size = Vector3(2, 2.5, 2)
 
 [node name="CrossWall_2" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=171713332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2360673, 1.9617214, 4.1306963)
-size = Vector3(12.505341, 3.9463043, 0.33442384)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999995, 2, -6.02666)
+size = Vector3(0.2, 4, 11.84668)
+
+[node name="Door_Cutout_2" type="CSGBox3D" parent="NavigationRegion3D/HouseShell/CrossWall_2" unique_id=397783032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
+operation = 2
+size = Vector3(2, 2.5, 2)
 
 [node name="Rooms" type="Node3D" parent="." unique_id=1235261790]
 
