@@ -3,10 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://clp0713i6vxbx" path="res://player.tscn" id="1_hfkix"]
 [ext_resource type="ArrayMesh" uid="uid://tv1224lgcqhp" path="res://assets/12140_Skull_v3_L2.obj" id="1_metfq"]
 [ext_resource type="Material" uid="uid://dex4f41jl2dfw" path="res://assets/Mansion_Walls_Dark.tres" id="1_o1325"]
+[ext_resource type="Texture2D" uid="uid://ctj7w7rv17cdn" path="res://assets/blood decals_decal2.png" id="2_10qhy"]
 [ext_resource type="Texture2D" uid="uid://by0vh6u00x5yh" path="res://assets/Image_0_2.jpeg" id="2_vy7fe"]
+[ext_resource type="Texture2D" uid="uid://bg06qnuu0ppto" path="res://assets/decal2_1.png" id="5_2y50f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5ubp"]
 albedo_color = Color(0.111756526, 0.112081565, 0.10320676, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obbqb"]
+albedo_texture = ExtResource("2_10qhy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10qhy"]
 albedo_texture = ExtResource("2_vy7fe")
@@ -16,7 +21,7 @@ albedo_texture = ExtResource("2_vy7fe")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1977198936]
 
 [node name="HouseShell" type="CSGBox3D" parent="NavigationRegion3D" unique_id=450426943]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0810266, -6.3292627, -0.79357964)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0379376, -6.3292627, -0.77371556)
 material_override = ExtResource("1_o1325")
 use_collision = true
 size = Vector3(25, 16, 25)
@@ -31,6 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
 size = Vector3(24, 0.2, 24)
 
 [node name="Floor_2nd_Ceiling2" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=51527449]
+material_override = SubResource("StandardMaterial3D_obbqb")
 size = Vector3(24, 0.2, 24)
 
 [node name="Floor_3rd_Ceiling3" type="CSGBox3D" parent="NavigationRegion3D/HouseShell" unique_id=1599313449]
@@ -102,6 +108,7 @@ size = Vector3(2, 2.850769, 1.6924438)
 
 [node name="Altar_Table" type="CSGBox3D" parent="Rooms/AltarRoom" unique_id=319806249]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.082822, -5.4867125, -1.5075067)
+use_collision = true
 size = Vector3(3, 1.2, 1.2700312)
 material = SubResource("StandardMaterial3D_10qhy")
 
@@ -167,8 +174,84 @@ mesh = ExtResource("1_metfq")
 transform = Transform3D(-0.009366721, -0.0034579965, -0.0005538812, 0, -0.0015815806, 0.009874138, -0.0035020742, 0.009248829, 0.0014814225, -0.35506058, 0.013080597, -0.03543496)
 mesh = ExtResource("1_metfq")
 
+[node name="Blood_Stain" type="Decal" parent="Rooms/AltarRoom" unique_id=1453388012]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 13.486467, -6.014602, -0.5774646)
+size = Vector3(4.795288, 2.6894531, 0.001)
+texture_albedo = ExtResource("5_2y50f")
+
 [node name="Player" parent="." unique_id=657102275 instance=ExtResource("1_hfkix")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=853937950]
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
 light_energy = 0.0
+
+[node name="Void_Blocker" type="CSGBox3D" parent="." unique_id=1216518886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.053337, -14.19114, 7.245921)
+material_override = ExtResource("1_o1325")
+use_collision = true
+size = Vector3(3.02948, 0.22839648, 6.0877457)
+
+[node name="Stair_Block_1" type="CSGBox3D" parent="." unique_id=608353726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -10.353805, 10.045741)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_2" type="CSGBox3D" parent="." unique_id=471928061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -10.546538, 9.77348)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_3" type="CSGBox3D" parent="." unique_id=401770005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.043106, -10.666748, 9.510409)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_4" type="CSGBox3D" parent="." unique_id=1387418935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.067009, -10.815828, 9.249056)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_5" type="CSGBox3D" parent="." unique_id=1591226942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.099789, -10.953367, 9.0396)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_6" type="CSGBox3D" parent="." unique_id=1818730572]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.09962, -11.091921, 8.839988)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
+
+[node name="Stair_Block_7" type="CSGBox3D" parent="." unique_id=1787719784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.109592, -11.286783, 8.625059)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
+
+[node name="Stair_Block_8" type="CSGBox3D" parent="." unique_id=1382893264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.134043, -11.453056, 8.406344)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
+
+[node name="Stair_Block_9" type="CSGBox3D" parent="." unique_id=701274126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.184156, -12.107279, 7.411832)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
+
+[node name="Stair_Block_10" type="CSGBox3D" parent="." unique_id=1155438355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.141052, -11.63799, 8.144493)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
+
+[node name="Stair_Block_12" type="CSGBox3D" parent="." unique_id=237657934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.176651, -11.919481, 7.651201)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
+
+[node name="Stair_Block_13" type="CSGBox3D" parent="." unique_id=1600786536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1341, -12.2248745, 7.1635976)
+use_collision = true
+size = Vector3(2.862, 0.2, 0.353)
+
+[node name="Stair_Block_11" type="CSGBox3D" parent="." unique_id=1499476515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.177742, -11.788645, 7.908056)
+use_collision = true
+size = Vector3(2.993, 0.2, 0.353)
