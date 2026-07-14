@@ -21,7 +21,7 @@ albedo_texture = ExtResource("2_vy7fe")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1977198936]
 
 [node name="HouseShell" type="CSGBox3D" parent="NavigationRegion3D" unique_id=450426943]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0379376, -6.3292627, -0.77371556)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0279546, -6.329263, -0.8187633)
 material_override = ExtResource("1_o1325")
 use_collision = true
 size = Vector3(25, 16, 25)
@@ -203,28 +203,38 @@ material_override = ExtResource("1_o1325")
 use_collision = true
 size = Vector3(3.02948, 0.22839648, 6.0877457)
 
-[node name="Stair_Block_1" type="CSGBox3D" parent="." unique_id=608353726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -10.353805, 10.045741)
-use_collision = true
-size = Vector3(2.99292, 0.2, 0.35283202)
-
-[node name="Stair_Block_27" type="CSGBox3D" parent="." unique_id=1665529332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -6.3264427, 10.045741)
-use_collision = true
-size = Vector3(2.99292, 0.2, 0.35283202)
-
 [node name="Stair_Block_2" type="CSGBox3D" parent="." unique_id=471928061]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -10.514728, 9.77348)
+transform = Transform3D(1, 0, 0, 0, -1.3343844, 0.8367356, 0, -2.0389206, -0.54760706, 16.098633, -12.483519, 7.143559)
+visible = false
 use_collision = true
-size = Vector3(2.99292, 0.2, 0.35283202)
+size = Vector3(3.201416, 3.0603466, 0.35283202)
+
+[node name="Stairs_Collision_Ramp" type="CSGBox3D" parent="Stair_Block_2" unique_id=2071042322]
+transform = Transform3D(0.8544928, 0, 0, 0, 2.265077, -0.49579996, 0, 1.5919229, 0.70545197, 0.009101868, 0.04126787, -2.586226)
+size = Vector3(3.455017, 0.001, 6.8537064)
 
 [node name="Stair_Block_28" type="CSGBox3D" parent="." unique_id=213790563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -6.4918942, 9.77348)
 use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
+[node name="Stair_Block_57" type="CSGBox3D" parent="." unique_id=1412078349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.036358, -6.4143457, 10.02344)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
 [node name="Stair_Block_3" type="CSGBox3D" parent="." unique_id=401770005]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.043106, -10.666748, 9.510409)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.043106, -10.966342, 9.510409)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_55" type="CSGBox3D" parent="." unique_id=2063097751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.043106, -10.791187, 9.863837)
+use_collision = true
+size = Vector3(2.99292, 0.2, 0.35283202)
+
+[node name="Stair_Block_56" type="CSGBox3D" parent="." unique_id=1710712819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.043106, -10.626436, 10.171035)
 use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
@@ -234,7 +244,7 @@ use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
 [node name="Stair_Block_4" type="CSGBox3D" parent="." unique_id=1387418935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.067009, -10.815828, 9.249056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.067009, -11.127895, 9.308309)
 use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
@@ -244,7 +254,7 @@ use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
 [node name="Stair_Block_5" type="CSGBox3D" parent="." unique_id=1591226942]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.099789, -10.953367, 9.0396)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.099789, -11.22118, 9.173098)
 use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
@@ -254,7 +264,7 @@ use_collision = true
 size = Vector3(2.99292, 0.2, 0.35283202)
 
 [node name="Stair_Block_6" type="CSGBox3D" parent="." unique_id=1818730572]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.09962, -11.091921, 8.839988)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.09962, -11.299115, 8.994294)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -264,7 +274,7 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_7" type="CSGBox3D" parent="." unique_id=1787719784]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.109592, -11.286783, 8.625059)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.109592, -11.484802, 8.694701)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -274,9 +284,9 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_8" type="CSGBox3D" parent="." unique_id=1382893264]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.134043, -11.453056, 8.406344)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.114359, -11.622494, 8.484135)
 use_collision = true
-size = Vector3(2.993, 0.2, 0.353)
+size = Vector3(2.9536333, 0.2, 0.353)
 
 [node name="Stair_Block_34" type="CSGBox3D" parent="." unique_id=510684919]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.134043, -7.329326, 8.406344)
@@ -284,7 +294,7 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_9" type="CSGBox3D" parent="." unique_id=701274126]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.184156, -12.107279, 7.411832)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.184156, -12.272744, 7.471414)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -294,7 +304,7 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_10" type="CSGBox3D" parent="." unique_id=1155438355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.141052, -11.63799, 8.144493)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.141052, -11.777892, 8.24301)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -304,7 +314,7 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_12" type="CSGBox3D" parent="." unique_id=237657934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.176651, -11.919481, 7.651201)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.176651, -12.091271, 7.77449)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -314,7 +324,7 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_13" type="CSGBox3D" parent="." unique_id=1600786536]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.187319, -12.2248745, 7.1635976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.187319, -12.439986, 7.276982)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -324,7 +334,7 @@ use_collision = true
 size = Vector3(2.993, 0.21650392, 0.37588158)
 
 [node name="Stair_Block_14" type="CSGBox3D" parent="." unique_id=1654553642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.195969, -12.380689, 6.8831954)
+transform = Transform3D(1, 0, 0, 0, 0.8161906, 0, 0, 0, 1, 16.195969, -12.589237, 7.073932)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -334,7 +344,7 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_15" type="CSGBox3D" parent="." unique_id=149555862]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -12.528242, 6.674298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -12.742087, 6.910548)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -344,12 +354,12 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_16" type="CSGBox3D" parent="." unique_id=175453342]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -12.677154, 6.4791574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -12.891188, 6.6535664)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_17" type="CSGBox3D" parent="." unique_id=1171905439]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -12.826847, 6.2967877)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.037138, 6.459638)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -359,17 +369,17 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_18" type="CSGBox3D" parent="." unique_id=558881043]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -12.98245, 6.11549)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.204216, 6.2610106)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_19" type="CSGBox3D" parent="." unique_id=1097705918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.121058, 5.9342437)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.364847, 6.0893555)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_20" type="CSGBox3D" parent="." unique_id=503618188]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.261921, 5.711346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.516341, 5.843128)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
@@ -434,37 +444,37 @@ use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_21" type="CSGBox3D" parent="." unique_id=299194798]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.403963, 5.4991655)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.633804, 5.6428823)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_22" type="CSGBox3D" parent="." unique_id=833105529]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.521614, 5.293448)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.800062, 5.4396086)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_23" type="CSGBox3D" parent="." unique_id=564385297]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.646193, 5.0925164)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.986061, 5.23535)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_24" type="CSGBox3D" parent="." unique_id=1892472855]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.785172, 4.9100347)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -14.070449, 5.009911)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_25" type="CSGBox3D" parent="." unique_id=1108332462]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -13.945388, 4.691485)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -14.104803, 4.7887764)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_26" type="CSGBox3D" parent="." unique_id=35812849]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -14.082982, 4.402239)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.199572, -14.166701, 4.5984654)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
 [node name="Stair_Block_11" type="CSGBox3D" parent="." unique_id=1499476515]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.177742, -11.788645, 7.908056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.177742, -11.928668, 8.016933)
 use_collision = true
 size = Vector3(2.993, 0.2, 0.353)
 
