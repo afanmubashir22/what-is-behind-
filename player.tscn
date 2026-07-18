@@ -23,5 +23,6 @@ target_position = Vector3(0, 0, -3)
 [node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=791010899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 light_color = Color(0.8810395, 0.8802515, 0, 1)
-light_energy = 10.0
-spot_range = 30.0
+light_energy = 5.0
+spot_range = 15.422
+spot_attenuation = 2.0
