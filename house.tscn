@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://by0vh6u00x5yh" path="res://assets/Image_0_2.jpeg" id="2_vy7fe"]
 [ext_resource type="Texture2D" uid="uid://dex1wlw7raca" path="res://assets/DefaultMaterial_1001_roughness.jpg" id="3_0l6dv"]
 [ext_resource type="Texture2D" uid="uid://bg06qnuu0ppto" path="res://assets/decal2_1.png" id="5_2y50f"]
+[ext_resource type="PackedScene" uid="uid://dhxw4grct8h34" path="res://assets/cupboard.fbx" id="5_k3v7f"]
 [ext_resource type="Texture2D" uid="uid://cmxtkttol8iqg" path="res://assets/DefaultMaterial_1001_albedo.jpeg" id="9_k3v7f"]
 [ext_resource type="Texture2D" uid="uid://c8orusn47c0xg" path="res://assets/DefaultMaterial_1001_roughness.jpeg" id="10_q8yd6"]
 
@@ -367,6 +368,9 @@ size = Vector3(0.2, 4, 11.84668)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5246153, -4.519013)
 operation = 2
 size = Vector3(2, 2.850769, 1.6924438)
+
+[node name="cupboard" parent="NavigationRegion3D" unique_id=43293326 instance=ExtResource("5_k3v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8964212, -10.229262, 9.810409)
 
 [node name="Rooms" type="Node3D" parent="." unique_id=1235261790]
 
@@ -1031,6 +1035,7 @@ size = Vector3(1.6514893, 2.4332275, 1)
 [node name="Basement_wall_1" type="CSGBox3D" parent="Basement_Rooms" unique_id=721721488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.835067, -12.242681, -0.7604201)
 material_override = SubResource("StandardMaterial3D_q8yd6")
+use_collision = true
 size = Vector3(0.32235718, 3.665501, 24.023087)
 
 [node name="Basement_Door_1" type="CSGBox3D" parent="Basement_Rooms/Basement_wall_1" unique_id=2133501796]
@@ -1041,6 +1046,7 @@ size = Vector3(1, 2.3658447, 1.3378906)
 [node name="Basement_wall_2" type="CSGBox3D" parent="Basement_Rooms" unique_id=888828850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4034405, -12.251036, -5.7931933)
 material_override = SubResource("StandardMaterial3D_wp4dx")
+use_collision = true
 size = Vector3(18.787384, 3.6572876, 0.70458984)
 
 [node name="Basement_Door_2" type="CSGBox3D" parent="Basement_Rooms/Basement_wall_2" unique_id=1631213493]
@@ -1051,6 +1057,7 @@ size = Vector3(1.5820313, 2.428131, 1)
 [node name="Basement_wall_3" type="CSGBox3D" parent="Basement_Rooms" unique_id=1783912197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5087624, -12.290175, -9.452295)
 material_override = SubResource("StandardMaterial3D_nut5b")
+use_collision = true
 size = Vector3(1, 3.7539673, 6.709961)
 
 [node name="Basement_Door_3" type="CSGBox3D" parent="Basement_Rooms/Basement_wall_3" unique_id=1545507804]
@@ -1061,6 +1068,7 @@ size = Vector3(1, 2.314209, 1.8168945)
 [node name="Basement_wall_4" type="CSGBox3D" parent="Basement_Rooms" unique_id=46369401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6257133, -12.265263, 2.8799438)
 material_override = SubResource("StandardMaterial3D_yqli2")
+use_collision = true
 size = Vector3(1, 3.7017212, 16.650513)
 
 [node name="Basement_Door_4" type="CSGBox3D" parent="Basement_Rooms/Basement_wall_4" unique_id=1036305373]
@@ -1071,6 +1079,7 @@ size = Vector3(1, 2.3808594, 1.6723633)
 [node name="CSGBox3D" type="CSGBox3D" parent="Basement_Rooms" unique_id=790307017]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.504667, -12.210335, 2.3652916)
 material_override = SubResource("StandardMaterial3D_m6qyk")
+use_collision = true
 size = Vector3(8.386895, 3.1315918, 0.7108154)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Basement_Rooms/CSGBox3D" unique_id=1544254471]
