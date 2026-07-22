@@ -23,6 +23,10 @@ Global="*uid://hmp6d11y6qjr"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_left={

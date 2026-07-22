@@ -7,11 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://ctj7w7rv17cdn" path="res://assets/blood decals_decal2.png" id="2_10qhy"]
 [ext_resource type="Texture2D" uid="uid://by0vh6u00x5yh" path="res://assets/Image_0_2.jpeg" id="2_vy7fe"]
 [ext_resource type="Texture2D" uid="uid://dex1wlw7raca" path="res://assets/DefaultMaterial_1001_roughness.jpg" id="3_0l6dv"]
-[ext_resource type="Texture2D" uid="uid://bg06qnuu0ppto" path="res://assets/decal2_1.png" id="5_2y50f"]
 [ext_resource type="PackedScene" uid="uid://dhxw4grct8h34" path="res://assets/cupboard.fbx" id="5_k3v7f"]
+[ext_resource type="PackedScene" uid="uid://bur5w3tjsj1ib" path="res://assets/old_wooden_table.glb" id="6_fl8vv"]
 [ext_resource type="Texture2D" uid="uid://cmxtkttol8iqg" path="res://assets/DefaultMaterial_1001_albedo.jpeg" id="9_k3v7f"]
 [ext_resource type="Texture2D" uid="uid://c8orusn47c0xg" path="res://assets/DefaultMaterial_1001_roughness.jpeg" id="10_q8yd6"]
 [ext_resource type="PackedScene" uid="uid://bj0kx5fnxkk38" path="res://assets/blood decals.glb" id="12_q8yd6"]
+[ext_resource type="PackedScene" uid="uid://ci5m1hx1c52sn" path="res://assets/Juta_Bag_LP.fbx" id="13_fl8vv"]
+[ext_resource type="PackedScene" uid="uid://cn22khtj56gpp" path="res://assets/stove.fbx" id="14_shbcp"]
+[ext_resource type="PackedScene" uid="uid://dw2n6w571q7b5" path="res://assets/SM_WashingMachine.fbx" id="15_qj8ql"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjvky"]
 albedo_texture = ExtResource("1_2y50f")
@@ -373,6 +376,24 @@ size = Vector3(2, 2.850769, 1.6924438)
 [node name="cupboard" parent="NavigationRegion3D" unique_id=43293326 instance=ExtResource("5_k3v7f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0282063, -10.177831, 9.82756)
 
+[node name="Sketchfab_Scene" parent="NavigationRegion3D" unique_id=1592557079 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.753413, -10.228847, 10.691842)
+
+[node name="Sketchfab_Scene2" parent="NavigationRegion3D" unique_id=1834129824 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(0.038387835, 0, 0.9992629, 0, 1, 0, -0.9992629, 0, 0.038387835, -4.455223, -10.228846, 7.389469)
+
+[node name="Sketchfab_Scene3" parent="NavigationRegion3D" unique_id=2077064143 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8431787, -14.078846, -6.6107297)
+
+[node name="Sketchfab_Scene4" parent="NavigationRegion3D" unique_id=2005225823 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.28183, -2.2288423, -12.212709)
+
+[node name="Sketchfab_Scene5" parent="NavigationRegion3D" unique_id=734284043 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(0.0041713156, 0, 0.9999913, 0, 1, 0, -0.9999913, 0, 0.0041713156, 10.382356, -6.228844, -2.0948732)
+
+[node name="Sketchfab_Scene6" parent="NavigationRegion3D" unique_id=349141099 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(0.034707684, 0, 0.9993975, 0, 1, 0, -0.9993975, 0, 0.034707684, -4.419982, -6.2288437, 10.102669)
+
 [node name="Rooms" type="Node3D" parent="." unique_id=1235261790]
 
 [node name="Basement" type="Node3D" parent="Rooms" unique_id=42217663]
@@ -452,12 +473,6 @@ mesh = ExtResource("1_metfq")
 [node name="Skull_7" type="MeshInstance3D" parent="Rooms/AltarRoom/Altar_Table/Candle_Light" unique_id=2018280713]
 transform = Transform3D(-0.009366721, -0.0034579965, -0.0005538812, 0, -0.0015815806, 0.009874138, -0.0035020742, 0.009248829, 0.0014814225, -0.35506058, 0.013080597, -0.03543496)
 mesh = ExtResource("1_metfq")
-
-[node name="Blood_Stain" type="Decal" parent="Rooms/AltarRoom" unique_id=1453388012]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 15.774997, -5.36493, -2.420782)
-size = Vector3(181.955, 253, 0.001)
-texture_albedo = ExtResource("5_2y50f")
-upper_fade = 0.35676157
 
 [node name="Player" parent="." unique_id=657102275 instance=ExtResource("1_hfkix")]
 
@@ -1078,10 +1093,10 @@ operation = 2
 size = Vector3(1, 2.3808594, 1.6723633)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Basement_Rooms" unique_id=790307017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.504667, -12.210335, 2.3652916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.504667, -12.495552, 2.3652916)
 material_override = SubResource("StandardMaterial3D_m6qyk")
 use_collision = true
-size = Vector3(8.386895, 3.1315918, 0.7108154)
+size = Vector3(8.386895, 3.7020264, 0.7108154)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Basement_Rooms/CSGBox3D" unique_id=1544254471]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030395508, -0.54437256, 0)
@@ -1125,7 +1140,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.217415, -6.2116065, -1.834
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.478769, -6.1737494, -2.8001623)
 
 [node name="blood decals8" parent="Basement_Rooms" unique_id=1646528249 instance=ExtResource("12_q8yd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.495434, -5.80373, -2.9997094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.495434, -6.143862, -2.9997094)
 
 [node name="blood decals9" parent="Basement_Rooms" unique_id=886798226 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.939159, -6.01812, -4.346571)
@@ -1191,6 +1206,54 @@ mesh = ExtResource("1_metfq")
 [node name="blood decals11" parent="Basement_Rooms" unique_id=1101668960 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4900498, -14.079253, -12.022333)
 
+[node name="Juta_Bag_LP" parent="Basement_Rooms" unique_id=1139529713 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.432325, -13.967645, 10.239236)
+
+[node name="Juta_Bag_LP2" parent="Basement_Rooms" unique_id=768113389 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.126028, -13.967644, 10.34108)
+
+[node name="Juta_Bag_LP3" parent="Basement_Rooms" unique_id=12039892 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3658125, -14.062642, -11.876954)
+
+[node name="Juta_Bag_LP4" parent="Basement_Rooms" unique_id=1651583158 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4800929, -14.078255, -11.790525)
+
+[node name="Juta_Bag_LP5" parent="Basement_Rooms" unique_id=179614606 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.851042, -14.070737, -7.191575)
+
+[node name="Juta_Bag_LP6" parent="Basement_Rooms" unique_id=1929737991 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.930053, -13.967645, -12.084494)
+
+[node name="Juta_Bag_LP7" parent="Basement_Rooms" unique_id=568017061 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8335266, -10.117643, -3.8580682)
+
+[node name="Juta_Bag_LP8" parent="Basement_Rooms" unique_id=1164757194 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.947317, -6.2696295, -0.12943143)
+
+[node name="Juta_Bag_LP9" parent="Basement_Rooms" unique_id=1658547049 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.629874, -2.11764, -11.714283)
+
+[node name="Juta_Bag_LP10" parent="Basement_Rooms" unique_id=1202810679 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3356552, -2.1176403, -11.656053)
+
+[node name="Juta_Bag_LP11" parent="Basement_Rooms" unique_id=1709218207 instance=ExtResource("13_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5026803, -2.1176403, 9.835891)
+
+[node name="stove" parent="Basement_Rooms" unique_id=1798340690 instance=ExtResource("14_shbcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.649368, -10.232893, 5.5607047)
+
+[node name="stove2" parent="Basement_Rooms" unique_id=1996911610 instance=ExtResource("14_shbcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.649368, -10.232893, 5.06007)
+
+[node name="stove3" parent="Basement_Rooms" unique_id=1638609494 instance=ExtResource("14_shbcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.649368, -10.232893, 4.5792446)
+
+[node name="SM_WashingMachine" parent="Basement_Rooms" unique_id=1928580274 instance=ExtResource("15_qj8ql")]
+transform = Transform3D(-0.0009599179, 0, 0.9999995, 0, 1, 0, -0.9999995, 0, -0.0009599179, -4.6463857, -10.229263, 4.0345106)
+
+[node name="SM_WashingMachine2" parent="Basement_Rooms" unique_id=458530617 instance=ExtResource("15_qj8ql")]
+transform = Transform3D(-0.9993878, 0, -0.034986656, 0, 1, 0, 0.034986656, 0, -0.9993878, 8.340003, -10.218143, 10.81943)
+
 [node name="blood decals" parent="." unique_id=1013416137 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.446018, -14.048315, -12.319033)
 
@@ -1217,3 +1280,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.102415, -14.000544, -4.402
 
 [node name="blood decals9" parent="." unique_id=1644675994 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(0.038387835, 0, -0.9992629, 0, 1, 0, 0.9992629, 0, 0.038387835, -0.05980453, -14.007957, -2.6730213)
+
+[node name="Couch_low" parent="." unique_id=2039518558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6341743, -10.208562, -3.946937)
