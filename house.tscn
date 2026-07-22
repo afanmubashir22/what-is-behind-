@@ -1280,6 +1280,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.102415, -14.000544, -4.402
 
 [node name="blood decals9" parent="." unique_id=1644675994 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(0.038387835, 0, -0.9992629, 0, 1, 0, 0.9992629, 0, 0.038387835, -0.05980453, -14.007957, -2.6730213)
-
-[node name="Couch_low" parent="." unique_id=2039518558]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6341743, -10.208562, -3.946937)
