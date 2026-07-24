@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://6gfufuvjwwa4" path="res://assets/item_j.fbx" id="17_11uyb"]
 [ext_resource type="PackedScene" uid="uid://burayaym1beah" path="res://assets/horror_bed.glb" id="19_1xqxo"]
 [ext_resource type="PackedScene" uid="uid://bdp0rywlgsy5h" path="res://assets/bed83h.fbx" id="20_kf312"]
+[ext_resource type="PackedScene" uid="uid://boy13unjcwm6t" path="res://assets/wooden_cross.glb" id="20_yh8vq"]
 [ext_resource type="PackedScene" uid="uid://d2erl7ujhx28b" path="res://assets/jail_cage.glb" id="21_1xqxo"]
 [ext_resource type="PackedScene" uid="uid://yufi3ujqfjvq" path="res://assets/voodoo_doll.glb" id="22_kf312"]
 [ext_resource type="PackedScene" uid="uid://cesh5vvhbn2d6" path="res://assets/horror_doll.glb" id="23_n3jyx"]
@@ -1170,16 +1171,19 @@ size = Vector3(1.3503418, 2.088745, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.75619, -10.946978, -12.599324)
 light_color = Color(0.9187545, 0.87137115, 0, 1)
 light_energy = 0.5
+shadow_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Basement_Rooms" unique_id=634128912]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.498702, -10.813447, 10.828205)
 light_color = Color(0.9187545, 0.87137115, 0, 1)
 light_energy = 0.5
+shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Basement_Rooms" unique_id=1624098731]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4723606, -10.922542, -5.085862)
 light_color = Color(0.9187545, 0.87137115, 0, 1)
 light_energy = 0.5
+shadow_enabled = true
 
 [node name="blood decals" parent="Basement_Rooms" unique_id=1049534667 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0217295, -2.2292488, 9.674278)
@@ -1291,7 +1295,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.930053, -13.967645, -12.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8335266, -10.117643, -3.8580682)
 
 [node name="Juta_Bag_LP8" parent="Basement_Rooms" unique_id=1164757194 instance=ExtResource("13_fl8vv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.947317, -6.2696295, -0.12943143)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 17.947317, -6.2696295, -0.12943143)
 
 [node name="Juta_Bag_LP9" parent="Basement_Rooms" unique_id=1658547049 instance=ExtResource("13_fl8vv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.629874, -2.11764, -11.714283)
@@ -1323,8 +1327,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.363441, -6.4650216, -2.697
 [node name="OmniLight3D" type="OmniLight3D" parent="Basement_Rooms/pot_LP" unique_id=9931873]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.130753, 0)
 light_color = Color(0.501245, 0.11661615, 0.73911345, 1)
-light_energy = 2.707
+light_energy = 16.0
+shadow_enabled = true
 omni_range = 1.183
+
+[node name="Sketchfab_Scene" parent="Basement_Rooms" unique_id=1833363544 instance=ExtResource("20_yh8vq")]
+transform = Transform3D(0.019193918, 0, 0.49963146, 0, 0.5, 0, -0.49963146, 0, 0.019193918, 0.058, -12, -6.1)
+
+[node name="Sketchfab_Scene2" parent="Basement_Rooms" unique_id=2067012202 instance=ExtResource("20_yh8vq")]
+transform = Transform3D(0.64000005, 0, 0, 0, 0.64000005, 0, 0, 0, 0.64000005, 19, -4.1600003, -6)
 
 [node name="blood decals" parent="." unique_id=1013416137 instance=ExtResource("12_q8yd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.446018, -14.048315, -12.319033)
@@ -1371,6 +1382,9 @@ transform = Transform3D(-0.59677124, 0.015474257, 0.8022622, 0, 0.99981403, -0.0
 [node name="item_j3" parent="." unique_id=287707397 instance=ExtResource("17_11uyb")]
 transform = Transform3D(1, 0, 0, 0, 0.99630946, 0.085834265, 0, -0.085834265, 0.99630946, 3.379675, -14.05832, -5.077086)
 
+[node name="item_j8" parent="." unique_id=687767626 instance=ExtResource("17_11uyb")]
+transform = Transform3D(-2.4937503, -0.06898711, -0.26668185, -0.10762532, 2.1481202, 0.14054912, 0.34644675, 0.17074914, -1.8759335, 17.644, -6.304, -1.6)
+
 [node name="item_j4" parent="." unique_id=226766713 instance=ExtResource("17_11uyb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0923324, -14.05832, -5.047217)
 
@@ -1413,6 +1427,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.303499, -14.414267, -4.5770
 [node name="OmniLight3D" type="OmniLight3D" parent="pot_LP" unique_id=1933565798]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0607128, 0)
 light_color = Color(1.5646905, 0.047104843, 2.7626126, 1)
+shadow_enabled = true
 omni_range = 1.058
 
 [node name="Sketchfab_Scene" parent="pot_LP" unique_id=773212295 instance=ExtResource("6_fl8vv")]
@@ -1455,7 +1470,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -4.6, -8.400001, -1.800
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -4.6, -9.8, -1.8000001)
 
 [node name="Sketchfab_Scene16" parent="." unique_id=1818399829 instance=ExtResource("30_17g22")]
-transform = Transform3D(0.0069098095, 0, -0.1798673, 0, 0.17999998, 0, 0.1798673, 0, 0.0069098095, 3.5186603, -10, 10.843127)
+transform = Transform3D(0.0069098095, 0, -0.1798673, 0, 0.17999998, 0, 0.1798673, 0, 0.0069098095, 3.5186603, -10.18, 10.843127)
 
 [node name="Sketchfab_Scene17" parent="." unique_id=663043215 instance=ExtResource("31_cgfd5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -9.3, -4.3)
@@ -1468,3 +1483,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -10.2, 2)
 
 [node name="Sketchfab_Scene20" parent="." unique_id=901195522 instance=ExtResource("33_a0v7u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -10.2, 0)
+
+[node name="Sketchfab_Scene22" parent="." unique_id=2087508942 instance=ExtResource("20_yh8vq")]
+transform = Transform3D(0.39999998, 0, 0, 0, 0.39999998, 0, 0, 0, 0.39999998, -5, -12, -1)
