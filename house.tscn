@@ -1486,3 +1486,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -10.2, 0)
 
 [node name="Sketchfab_Scene22" parent="." unique_id=2087508942 instance=ExtResource("20_yh8vq")]
 transform = Transform3D(0.39999998, 0, 0, 0, 0.39999998, 0, 0, 0, 0.39999998, -5, -12, -1)
+
+[node name="Sketchfab_Scene23" parent="." unique_id=1052504491 instance=ExtResource("6_fl8vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2.33, -12)
