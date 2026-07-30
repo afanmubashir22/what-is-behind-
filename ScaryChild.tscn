@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c807agav20rkx"]
+
+[ext_resource type="Script" uid="uid://dxmbpulsllsdo" path="res://character_body_3d.gd" id="1_g4cay"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=503512247]
+script = ExtResource("1_g4cay")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=499973249]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970897070]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1320625641]
