@@ -1,14 +1,17 @@
 extends CharacterBody3D
+
 @export var Walk_speed = 3.0
 var gravity_strength = 20.0
+
 @onready var nav_agent = $NavigationAgent3D
+
 var player = null
+
 func _ready():
 	velocity = Vector3.ZERO
 	await get_tree().create_timer(0.2).timeout
 	player = get_tree().get_first_node_in_group("player")
-	if not player:
-		player = get_parent().find_child("Player", true, false)
+								   
 func _physics_process(delta):
 		if not is_on_floor():
 			velocity.y -= gravity_strength * delta
