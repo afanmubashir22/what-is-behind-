@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bounw148f78hk" path="res://main_menu.gd" id="1_i26rj"]
 [ext_resource type="Texture2D" uid="uid://bg06qnuu0ppto" path="res://assets/decal2_1.png" id="2_h7a2f"]
 [ext_resource type="Texture2D" uid="uid://dmq6a5mh8qe3b" path="res://assets/decal1_0.png" id="3_qoqlk"]
+[ext_resource type="AudioStream" uid="uid://ctnv6pjg6vrca" path="res://assets/Demented-Nightmare-MP3(chosic.com).mp3" id="4_qoqlk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i26rj"]
 
@@ -39,7 +40,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 48
-text = "WHAT IS BEHID"
+text = "WHAT IS BEHIND"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=415459206]
 layout_mode = 1
@@ -75,13 +76,14 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 54.0
-offset_top = -179.0
+offset_top = -160.0
 offset_right = -31.0
+offset_bottom = -69.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0.6392157, 0.19607843, 0.19607843, 1)
+theme_override_colors/font_color = Color(0.73333335, 0.73333335, 0.73333335, 1)
 theme_override_font_sizes/font_size = 18
-text = "\"in 1984, the family living in this house vanished withouta  trace. The only thing police found was a child left in the centre of the living room...and footsteps leading into the basement that never backed out. They say something still lives inside these walls.And it has bee waiting for someone to enter.\"        \"HERE TO EXORCISE THE SOUL\"..."
+text = "\"in 1984, the family living in this house vanished without a  trace. The only thing police found was a child left in the centre of the living room...and footsteps leading into the basement that never walked back out. They say something still lives inside these walls. And it has been waiting for someone to enter.\"        \"HERE TO EXORCISE THE SOUL\"..."
 label_settings = SubResource("LabelSettings_i26rj")
 autowrap_mode = 2
 
@@ -123,3 +125,8 @@ texture = ExtResource("2_h7a2f")
 [node name="Decal25" type="Sprite2D" parent="." unique_id=1813828060]
 position = Vector2(731, 381)
 texture = ExtResource("2_h7a2f")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=179966476]
+stream = ExtResource("4_qoqlk")
+volume_db = -8.0
+autoplay = true
