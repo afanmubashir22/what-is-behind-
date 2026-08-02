@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dldnavpslwynv"]
+
+[ext_resource type="Script" uid="uid://bounw148f78hk" path="res://main_menu.gd" id="1_i26rj"]
+[ext_resource type="Texture2D" uid="uid://bg06qnuu0ppto" path="res://assets/decal2_1.png" id="2_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://dmq6a5mh8qe3b" path="res://assets/decal1_0.png" id="3_qoqlk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i26rj"]
+
+[node name="MainMenu" type="Control" unique_id=1803089728]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i26rj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=878122578]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=284663144]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.5
+offset_top = 44.0
+offset_right = 175.5
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.54509807, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 48
+text = "WHAT IS BEHID"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=415459206]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=298599995]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=844808477]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "QUIT"
+
+[node name="StoryLabel" type="Label" parent="." unique_id=843304502]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = -179.0
+offset_right = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.6392157, 0.19607843, 0.19607843, 1)
+theme_override_font_sizes/font_size = 18
+text = "\"in 1984, the family living in this house vanished withouta  trace. The only thing police found was a child left in the centre of the living room...and footsteps leading into the basement that never backed out. They say something still lives inside these walls.And it has bee waiting for someone to enter.\"        \"HERE TO EXORCISE THE SOUL\"..."
+label_settings = SubResource("LabelSettings_i26rj")
+autowrap_mode = 2
+
+[node name="Decal21" type="Sprite2D" parent="." unique_id=1526955816]
+position = Vector2(159, 288)
+scale = Vector2(1.1875, 1.1015626)
+texture = ExtResource("2_h7a2f")
+
+[node name="Decal10" type="Sprite2D" parent="." unique_id=1443131185]
+position = Vector2(862, 301)
+scale = Vector2(1.34375, 1.28125)
+texture = ExtResource("3_qoqlk")
+
+[node name="Decal11" type="Sprite2D" parent="." unique_id=1660838585]
+position = Vector2(994, 222)
+scale = Vector2(1.2656251, 1.5468749)
+texture = ExtResource("3_qoqlk")
+
+[node name="Decal12" type="Sprite2D" parent="." unique_id=1618305188]
+position = Vector2(777, 163)
+texture = ExtResource("3_qoqlk")
+
+[node name="Decal22" type="Sprite2D" parent="." unique_id=568618152]
+position = Vector2(284, 104)
+texture = ExtResource("2_h7a2f")
+
+[node name="Decal23" type="Sprite2D" parent="." unique_id=265719259]
+position = Vector2(396, 249)
+texture = ExtResource("2_h7a2f")
+
+[node name="Decal13" type="Sprite2D" parent="." unique_id=1967495814]
+position = Vector2(318, 347)
+texture = ExtResource("3_qoqlk")
+
+[node name="Decal24" type="Sprite2D" parent="." unique_id=1924221030]
+position = Vector2(1006, 399)
+texture = ExtResource("2_h7a2f")
+
+[node name="Decal25" type="Sprite2D" parent="." unique_id=1813828060]
+position = Vector2(731, 381)
+texture = ExtResource("2_h7a2f")
