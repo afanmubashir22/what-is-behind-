@@ -11,10 +11,11 @@ radius = 0.25
 height = 1.0
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=503512247]
+transform = Transform3D(1.7915399, 0, 0, 0, 1.3141097, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g4cay")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=499973249]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0627325, 0)
+transform = Transform3D(1, 0, 0, 0, 1.1296746, 0, 0, 0, 1.3165977, 0, 0.9910049, 0)
 mesh = SubResource("CapsuleMesh_g4cay")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970897070]
