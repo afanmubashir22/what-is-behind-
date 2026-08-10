@@ -2,7 +2,7 @@ extends StaticBody3D
 var player_near: bool =false
 func _ready() -> void:
 		set_meta("is_unlocked", false)
-func _unhandled_input(event: Inputevent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 		if player_near and (event.is_action_pressed("ui_accept")or(event is InputEventKey and event.pressed and event.keycode == KEY_E)):
 				try_open_door()
 func try_open_door() -> void:

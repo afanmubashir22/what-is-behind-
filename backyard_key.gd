@@ -14,10 +14,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		if player_near and (event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_E)):
 				pick_up_key()
 func pick_up_key() -> void:
-		var door = get_node_or_null("/root/House/BackyardDoor")
+		var door = get_node_or_null("/root/house/BackyardDoor")
 		if door:
-				door.st_meta("is_unlocked", true)
-		var task_label = get_node_or_null("/root/House/CanvasLayer/Label")
+				door.set_meta("is_unlocked", true)
+		var task_label = get_node_or_null("/root/house/CanvasLayer/Label")
 		if task_label:
 				task_label.text = "Backyard Door Unlocked!"
 				await get_tree().create_timer(1.5).timeout
