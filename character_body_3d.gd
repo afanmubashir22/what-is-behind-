@@ -27,8 +27,6 @@ func _physics_process(delta):
 				velocity.z =direction.z * Walk_speed
 					
 		move_and_slide()
-					
-					
 
 
 func _on_backyard_key_body_entered(body: Node3D) -> void:
