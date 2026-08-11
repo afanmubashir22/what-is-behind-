@@ -1,29 +1,22 @@
 extends Area3D
+@export var message_label: Control
+@export var House: Node3D
 func _ready() -> void:
-		monitoring = true
-		body_entered.connect(_on_body_entered)
+		if message_label:
+			message_label.hide()
 func _on_body_entered(body: Node3D) -> void:
-		if body is StaticBody3D:
-				return
-		print("KEY TOUCHED BY: ", body.name)
-		var door = get_node_or_null("/root/House/BackyardDoor")
-		if door:
-				door.queue_free()
-		else:
-			door = get_node_or_null("/root/House/BackyardDoor")
-			if door:
-					door.queue_free()
-		var task_label = get_node_or_null("/root/house/CanvasLayer/Label")
-		if not task_label:
-				task_label = get_node_or_null("/root/House/CanvasLayer/Label")
-		if task_label:
-			task_label.text = "Objective: Go to the Backyard"
-		var msg_label = get_node_or_null("/root/house/CanvasLayer/MessageLabel")
-		if not msg_label:
-				msg_label = get_node_or_null("/root/House/CanvasLayer/MessageLabel")
-		if msg_label:
-				msg_label.text = "BACKYARD DOOR UNLOCKED!"
-				await get_tree().create_timer(2.5).timeout
-				msg_label.text = ""
+		if body.name == "Player":
+				_collect_key()
+func _collect_key() -> void:
+		if House:
+				House.queue_free()
+		if message_label:
+				message_label.show()
+		if has_node("MeshINstance3D"):
+			$MeshInstance3D.hide()
+		if has_node("CollisionShape3D"):
+			$CollisionShape3D.set_deferred("disabled", true)
+		await get_tree().create_timer(2.0).timeout
+		if message_label:
+			message_label.hide()
 		queue_free()
-				
