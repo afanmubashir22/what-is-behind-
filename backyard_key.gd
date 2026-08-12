@@ -11,5 +11,5 @@ func _collect_key() -> void:
 		hide()
 		$CollisionShape3D.set_deferred("disabled", true)
 		await get_tree().create_timer(3.0).timeout
-		queue_free
+		queue_free()
 		
