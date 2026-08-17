@@ -1,15 +1,13 @@
 extends Area3D
-@export var objective_label: Label
-@export var House: Node3D
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
 func _on_body_entered(body: Node3D) -> void:
-		_collect_key()
-func _collect_key() -> void:
-		if objective_label:
-				objective_label.text = "Objective: Backyard door unlocked"
-		if House:
-					House.queue_free()
-		hide()
-		$CollisionShape3D.set_deferred("disabled", true)
-		await get_tree().create_timer(3.0).timeout
-		queue_free()
-		
+	if body.is_in_group("player") or body.name == "PLAYER":
+		var door = get_node_or_null("/root/House/BackyardDoor")
+		if door:
+				door.queue_free()
+		var task_label = get_node_or_null("/root/House/CanvasLayer/Label")
+		if task_label:
+				task_label.text = "Objective:Escape through the backyard!"
+				queue_free()
+				

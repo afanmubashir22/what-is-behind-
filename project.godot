@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="WHAT IS BEHIND"
-run/main_scene="uid://duyc1uahknbux"
+run/main_scene="uid://c1re8p8wjas60"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -67,8 +67,10 @@ jump={
 ]
 }
 
+[navigation]
+
+3d/default_cell_height=0.1
+
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

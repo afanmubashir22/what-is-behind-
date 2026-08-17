@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c4g2l7tjvabe"]
+
+[ext_resource type="Script" uid="uid://k5n7delxfsnl" path="res://eye.gd" id="1_1t7xr"]
+[ext_resource type="PackedScene" uid="uid://dxljsx21w2xlw" path="res://assets/realistic_human_eye.glb" id="1_05vdx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_05vdx"]
+radius = 0.12548698
+
+[node name="Eye" type="Area3D" unique_id=1020589825]
+script = ExtResource("1_1t7xr")
+
+[node name="Sketchfab_Scene" parent="." unique_id=896815549 instance=ExtResource("1_05vdx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.6805797, -1.8898156, -0.5477583)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1099458779]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.002860427, -0.0083937645, 0)
+shape = SubResource("SphereShape3D_05vdx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -11,7 +11,7 @@ extends CharacterBody3D
 @onready var raycast: RayCast3D = $Head/RayCast3D
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-
+var eyes_collected:int=0
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 	
@@ -43,3 +43,9 @@ func  _physics_process(delta: float)  -> void:
 		velocity.x = move_toward(velocity.x, 0,decleration*delta)
 		velocity.z = move_toward(velocity.z, 0, decleration*delta)
 	move_and_slide()
+func die():
+	print("Player was caught!")
+	get_tree().call_deferred("change_scene_to_file","res://house.scn")
+func collect_eye():
+	eyes_collected+=1
+	print("Eye collected! Total eyes: ", eyes_collected)

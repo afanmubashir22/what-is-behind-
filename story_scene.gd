@@ -13,7 +13,7 @@ func _on_continue_pressed():
 	if creepy_music:
 		creepy_music.stop()
 		
-		get_tree().change_scene_to_file(main_game_scene)
+		get_tree().change_scene_to_file("res://house.scn")
 func _on_continue_button_pressed():
 		_on_continue_pressed()
 		
