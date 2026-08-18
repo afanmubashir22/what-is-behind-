@@ -76,3 +76,9 @@ The child is inside the house.
 He can find you and kill you.
 
 Stay careful and try to survive while finding the eyes.
+
+## Instructions 
+
+you can play this game by downloading the zip file that contains .exe file in itch.io as the web version cant be uploaded on itch 
+
+and you can also download the .zip file here in github and then extract the file and import the folder in godot
