@@ -82,3 +82,11 @@ Stay careful and try to survive while finding the eyes.
 You can download the zip file in itch.io to get the exe file and play the game
 
 And you can also download the zip file here to run this locally in godot
+
+
+## SCREENSHOTS
+
+<img width="1144" height="633" alt="image" src="https://github.com/user-attachments/assets/ad82d9ad-0bc6-4ce7-9516-305753711d78" />
+<img width="1139" height="645" alt="image" src="https://github.com/user-attachments/assets/4d99638e-7e35-4af3-8ffa-bc6b81183e7f" />
+<img width="1157" height="665" alt="image" src="https://github.com/user-attachments/assets/35225ac0-19c7-42d1-9173-07e12a0176df" />
+
