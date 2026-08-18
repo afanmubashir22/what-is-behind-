@@ -12,6 +12,7 @@ radius = 0.77266484
 
 [node name="ScaryChild" type="CharacterBody3D" unique_id=503512247]
 script = ExtResource("1_g4cay")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970897070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034659803, -0.029748261, -0.023734093)
